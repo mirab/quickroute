@@ -1377,10 +1377,8 @@ namespace QuickRoute.UI
 
       // set number of rows and columns in grid
       updatingUINowCounter++;
-      laps.RowCount = 0;
-      laps.ColumnCount = 0;
-      laps.RowCount = lapInfoList.Count;
       laps.ColumnCount = (lapInfoList.Count == 0 ? 0 : lapInfoList[0].GetProperties().Count);
+      laps.RowCount = lapInfoList.Count;
       updatingUINowCounter--;
       SetLapGridHeaders();
       SortLapGrid();
